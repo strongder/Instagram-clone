@@ -1,0 +1,16 @@
+.homepage{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    overflow-y: scroll;
+        
+    .post{
+        width: 50%;
+    }
+    .suggestion{
+        width: 30%;
+        display: flex;
+    }
+
+}

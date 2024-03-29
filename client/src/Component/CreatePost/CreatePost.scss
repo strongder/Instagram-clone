@@ -1,0 +1,134 @@
+/* styles.css */
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .create-post-dialog {
+    background-color: #272626;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 850px;
+    height: 550px;
+
+    .dialog-header {
+      display: flex;
+      flex-direction: row;
+      padding: 10px;
+      justify-content: space-between;
+      border-bottom: 1px solid #565656;
+
+      h3 {
+        margin: 0;
+      }
+      button {
+        border: none;
+        background: none;
+        color: white;
+      }
+      .share {
+        color: rgb(40, 143, 226);
+        font-size: 17px;
+        font-weight: 500px;
+      }
+    }
+
+    .dialog-main {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+
+      .image-post {
+        width: 55%;
+        height: 500px;
+        border-end-start-radius: 8px;
+        overflow: hidden;
+
+        .upload {
+          display: flex;
+          height: 100%;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          svg {
+            margin: 0;
+            font-size: 120px;
+            color:rgb(0, 157, 255);
+
+          }
+        }
+        .upload:hover{
+          cursor: pointer;
+        }
+
+        img {
+          width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng của thẻ div */
+          height: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều cao của thẻ div */
+          object-fit: cover; /* Ẩn phần dư thừa của ảnh để vừa với kích thước của thẻ div */
+        }
+      }
+
+      .dialog-content {
+        flex: 1;
+        .user {
+          display: flex;
+
+          margin: 15px 20px;
+          align-items: center;
+          .avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%; /* để làm cho avatar trông tròn */
+            margin-right: 10px;
+          }
+        }
+
+        .content {
+          display: flex;
+          padding: 10px 30px;
+          flex-direction: column;
+
+          .input {
+            border: none;
+            outline: none;
+            background: none;
+            color: white;
+            font-size: 16px;
+            width: 318px;
+            height: 147px;
+            resize: none;
+          }
+          .emoji {
+            background: none;
+            border: none;
+            color: #beb4b4;
+            margin-right: auto;
+          }
+        }
+      }
+    }
+  }
+  .close {
+    background: none;
+    border: none;
+    color: white;
+    position: absolute;
+    top: 35px;
+    right: 55px;
+    svg {
+      font-size: 30px;
+    }
+  }
+  .close:hover {
+    cursor: pointer;
+  }
+}

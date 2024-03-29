@@ -1,0 +1,39 @@
+.layout__container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  .layout__nav {
+    position: fixed;
+    height: 100%;
+    z-index: 1;
+    background-color: black;
+    width: 240px;
+    transition: width 0.3s ease;
+  }
+
+  .layout__content {
+    display: flex;
+    margin-left: auto;
+    width: calc(100% - 240px);
+    flex: 1;
+  }
+
+  /* Hiệu ứng khi kéo ra và kéo vào */
+  .layout__nav.expanded {
+    width: 82px;
+
+    /* Độ rộng của sidebar khi được kéo ra */
+    .sidenav {
+      .sidenav__button {
+        span {
+          display: none;
+        }
+      }
+      .sidenav__logo {
+        display: none;
+      }
+    }
+  }
+}

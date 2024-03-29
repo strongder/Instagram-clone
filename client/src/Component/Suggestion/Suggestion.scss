@@ -1,0 +1,59 @@
+.suggestion__container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-top: 30px;
+  padding-left: 65px;
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* để làm cho avatar trông tròn */
+    margin-right: 15px;
+  }
+  button {
+    margin-left: auto;
+    border: none;
+    background: none;
+    color: rgb(0, 98, 255);
+    font-size: 13px;
+  }
+  button:hover {
+    cursor: pointer;
+    font-weight: 600px;
+  }
+
+  .user__current {
+    display: flex;
+    padding: 20px 0 0 0px;
+    text-decoration: none;
+    color: white;
+  }
+
+  .list__item {
+    margin: 10px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    .item {
+      a {
+        display: flex;
+        text-decoration: none;
+        color: white;
+      }
+      display: flex;
+      text-decoration: none;
+      color: white;
+    }
+  }
+  .more {
+    margin: 15px auto;
+    font-size: 14px;
+  }
+  .more:hover {
+    cursor: pointer;
+    color: #727272;
+  }
+}

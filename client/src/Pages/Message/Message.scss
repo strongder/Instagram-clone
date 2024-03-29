@@ -1,0 +1,31 @@
+.message {
+  flex: 1;
+  position: absolute;
+  left:82px;
+  right: 0;
+  height: 100%;
+  z-index: -1;
+  display: flex;
+  flex-direction: row;
+
+  .list__chat {
+    display: flex;
+    width: 25%;
+  }
+  .window__chat {
+    width: 75%;
+    transition: width 0.4s ease-in-out;
+  }
+
+
+  .info__user{
+    flex: 1px;
+    border-left: 1px solid  #525050 ;
+  }
+
+
+  .window__chat.full {
+    width: 48%; /* Độ rộng của sidebar khi được kéo ra */
+    
+  }
+}

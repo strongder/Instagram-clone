@@ -1,0 +1,82 @@
+.chat__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 75px;
+    border-bottom: 1px solid #565454;
+    .avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%; /* để làm cho avatar trông tròn */
+      margin-right: 10px;
+    }
+    span {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .button__actions {
+      margin-left: auto;
+      display: flex;
+      gap: 10px;
+
+      svg {
+        font-size: 25px;
+      }
+
+      .action {
+        border: none;
+        background: none;
+        color: white;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .main {
+    height: 80%;
+
+    .list__message {
+      height: 100%;
+      overflow-y: auto;
+
+      .message {
+      }
+    }
+  }
+
+  .footer {
+    flex: 1;
+    margin: 13px 20px;
+    display: flex;
+    border: 1px solid #827d7d;
+    border-radius: 20px;
+    padding: 0 11px;
+    input {
+      border: none;
+      background: none;
+      outline: none;
+      font-size: 16px;
+      color: white;
+      width: 86%;
+    }
+    .action {
+      border: none;
+      background: none;
+      color: white;
+      font-size: 16px;
+       margin:auto;
+      svg {
+        font-size: 30px;
+      }
+    }
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+}

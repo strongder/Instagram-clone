@@ -30,6 +30,7 @@ public class MessageServiceImpl implements MessageService{
 	@Autowired
 	private MessageRepository messageRepository;
 	
+	@Autowired
 	private UserRepository userRepository;
 	
 	@Override

@@ -35,9 +35,10 @@ public class MessageController {
 	}
 	
 	@MessageMapping("/messages/room/{roomId}")
-	@SendTo("topic/room/{roomId}")
+	@SendTo("/topic/room/{roomId}")
 	public MessageDTO sendMessage(@Payload MessageDTO messageDTO, @DestinationVariable Long roomId)
 	{
+		System.out.println("tin nhắn"+ messageDTO);
 		MessageDTO message = messageService.create(messageDTO);
 		return message;
 	}

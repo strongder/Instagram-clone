@@ -1,0 +1,37 @@
+.input__chat {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  align-items: start;
+  justify-content: center;
+  .image_send {
+    width: 45px;
+    margin: 12px;
+    height: 45px;
+    border-radius: 5px;
+  }
+
+  input {
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    width: 86%;
+  }
+  .div {
+    display: flex;
+    width: 100%;
+    .action {
+      border: none;
+      background: none;
+      color: white;
+      font-size: 16px;
+      margin: auto;
+      svg {
+        font-size: 30px;
+      }
+    }
+  }
+}

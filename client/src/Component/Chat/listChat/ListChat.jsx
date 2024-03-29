@@ -4,16 +4,21 @@ import PersonAddSharpIcon from "@mui/icons-material/PersonAddSharp";
 import { dataUser } from "../../../data";
 import { useDispatch, useSelector } from "react-redux";
 import { getRoomByUser } from "../../../redux/slices/roomSlice";
-const ListChat = () => {
+const ListChat = (props) => {
+  const {onSelectedRoom} = props
   const { userCurrent, users } = useSelector((state) => state.users);
   const dispatch = useDispatch();
   const { listRoom, loadingRoom, errorRoom } = useSelector(
     (state) => state.rooms
   );
-
+  const handleSelectedRoom = (roomId)=>{
+    console.log("click")
+    onSelectedRoom(roomId);
+  }
   const getUser = (id) => {
     return users.find((user) => user.id === id);
   };
+  
   useEffect(() => {
     dispatch(getRoomByUser(userCurrent.id));
   }, []);
@@ -41,7 +46,7 @@ const ListChat = () => {
               user = getUser(userId);
             }
             return (
-              <div key={index} className="item">
+              <div key={index} className="item" onClick={() => handleSelectedRoom(item.id)}>
                 <img className="avatar" src={user ? user.avatar:''} alt="Avatar" />
                 <span className="username">{user ? user.username: item.name}</span>
               </div>
